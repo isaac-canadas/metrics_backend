@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get '/metrics/average_minute', to: 'metrics#average_minute'
   # GET /metrics
   get '/metrics', to: 'metrics#index'
+  # GET /metrics/:id
+  get '/metrics/:id', to: 'metrics#show'
   # POST /metrics
   post '/metrics', to: 'metrics#create'
   # PUT /metrics/:id

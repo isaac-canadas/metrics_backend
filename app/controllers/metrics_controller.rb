@@ -12,6 +12,11 @@ class MetricsController < ApplicationController
     @metric = Metric.create!(metric_params)
     json_response(@metric, :created)
   end
+  
+  # GET /todos/:id
+  def show
+    json_response(@metric)
+  end
 
   # PUT /metrics/:id
   def update

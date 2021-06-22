@@ -105,4 +105,50 @@ RSpec.describe "Metrics API", type: :request do
       expect(response).to have_http_status(204)
     end
   end
+
+  # Test suite for GET /metrics/average_day
+  describe 'GET /metrics/average_day' do
+    before { get "/metrics/average_day" }
+
+    context 'when the record exists' do
+      it 'returns the average' do
+        expect(json).not_to be_empty
+      end
+
+      it 'returns status code 200' do
+        expect(response).to have_http_status(200)
+      end
+    end
+  end
+
+  # Test suite for GET /metrics/average_hour
+  describe 'GET /metrics/average_hour' do
+    before { get "/metrics/average_hour" }
+
+    context 'when the record exists' do
+      it 'returns the average' do
+        expect(json).not_to be_empty
+      end
+
+      it 'returns status code 200' do
+        expect(response).to have_http_status(200)
+      end
+    end
+  end
+
+  # Test suite for GET /metrics/average_minute
+  describe 'GET /metrics/average_minute' do
+    before { get "/metrics/average_minute" }
+
+    context 'when the record exists' do
+      it 'returns the average' do
+        expect(json).not_to be_empty
+      end
+
+      it 'returns status code 200' do
+        expect(response).to have_http_status(200)
+      end
+    end
+  end
 end
+
